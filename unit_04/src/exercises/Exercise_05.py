@@ -5,7 +5,7 @@ import random
 
 # randomly generate a number between 1 and 10
 secret_guess = random.randint(1,10)
-
+secret_guess = 3
 
 counter = 0
 
@@ -14,6 +14,7 @@ print("You need to try and guess the number between 1 and 10...\n")
 print("If you wish to exit the game enter 0...\n")
 
 guess = int(input("Please enter a guess:\n"))
+
 counter += 1
 
 while guess != secret_guess:

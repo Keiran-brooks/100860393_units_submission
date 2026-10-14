@@ -6,10 +6,14 @@ running = True
 numbers = []
 
 while running:
-    i = input("Please enter a number. Enter 0 to stop\n")
-    if(i=='0'):
+    i = float(input("Please enter a number. Enter 0 to stop\n"))
+    if(i==0.0):
         running = False
+        
     else:
-        numbers.append(float(i))
+        numbers.append(i)
 
+if(numbers==[]):
+    print('No numbers entered.')
+    exit()
 print(f"The average of the numbers entered is {sum(numbers)/len(numbers)}")
