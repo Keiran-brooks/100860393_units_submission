@@ -1,5 +1,19 @@
-def arithmetic_sum():
-    pass
+# def arithmetic_sum(a,b,n):
+#     # increment = 1
+#     # finalValue = a
+    
+#     # while increment<n:
+#     #     increment +=1
+#     #     finalValue += b*increment
+        
+    
+#     # return finalValue
+#     finalValue = a 
+#     for i in range(n):
+#         finalValue+=b*i
+
+    
+
 
 if __name__ == "__main__":
     print(arithmetic_sum(1,1,100))   # prints the return value - 5050
