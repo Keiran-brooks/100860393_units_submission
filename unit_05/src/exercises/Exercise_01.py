@@ -1,10 +1,18 @@
-def calc_retail_price():
-    # remove the following line and write your function here
-    pass
+
+# Please enter a wholesale cost:
+# 5.00
+# Please enter a markup percentage:
+# 50
+# The retail price is £7.50.
+
+def calc_retail_price(price, markup):
+    return price + (price * markup / 100)
 
 def main():
-    # remove the following line and write your main program here
-    pass
+    wholesalePrice = float(input("Please enter a wholesale cost:\n"))
+    markupAmount = float(input("Please enter a markup percentage:\n"))
+
+    print(f"The retail price is £{calc_retail_price(wholesalePrice,markupAmount):.2f}.")
 
 # This is needed for the tests. This is now the first bit of code Python will run.
 # Please ask if you are curious, but it is enough to understand that this calls the main() function and runs whatever code you have in there.

@@ -1,5 +1,15 @@
-def convert_temp():
-  pass
+def convert_temp(temp, Fahrenheit=False):
+  if Fahrenheit:
+    if temp<-459.67:
+      raise ValueError("Temperature below absolute zero is invalid for Fahrenheit.")
+    return round((5/9)*(temp - 32), 2)
+  
+  else:
+    if temp<-273.15:
+      raise ValueError("Temperature below absolute zero is invalid for Celsius.")
+    return round((9/5)*temp + 32, 2)
+     
+     
 
 if __name__ == "__main__":
     # I would comment some of these out as you build up parts of convert_temp
