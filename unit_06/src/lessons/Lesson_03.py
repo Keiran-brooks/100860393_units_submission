@@ -1,5 +1,16 @@
 def tuple_search(t, search_index):
-    pass
+    amount = 0
+    firstIndex = 0
+    for i in range(len(t)):
+        itemToCheck = t[i]
+        if itemToCheck == search_index:
+            if amount == 0:
+                firstIndex = i
+            amount += 1 
+
+
+    return (amount, firstIndex)
+            
 
 if __name__ == "__main__":
     # main code

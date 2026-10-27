@@ -1,5 +1,6 @@
 def add_from_list(d, items_to_add):
-    pass
+    for k1,k2 in items_to_add:
+        d[k1] = k2
 
 
 if __name__ == "__main__":

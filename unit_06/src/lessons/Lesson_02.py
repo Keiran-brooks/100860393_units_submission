@@ -1,5 +1,14 @@
+import copy
+
 def change_list(my_list):
-    pass
+    tempList = copy.copy(my_list)
+    tempList.pop(1)
+    tempList.append("Banana")
+    tempList.sort()
+
+    return tempList
+    
+    
 
 if __name__ == "__main__":
     fruit_list = ["Pear", "Orange", "Peach", "Apple"]

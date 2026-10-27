@@ -1,6 +1,15 @@
 def find_max_row(grid):
     # HINT: https://datagy.io/python-index-of-max-item-list/
-    pass
+    biggestMaxNumber = 0
+    biggestRow = 1
+    for i in range(len(grid)):
+        currentMax = sum(grid[i])
+        
+        if currentMax > biggestMaxNumber:
+            biggestMaxNumber = currentMax
+            biggestRow = i+1
+
+    return biggestRow
 
 def print_grid(grid):
     for row in grid:

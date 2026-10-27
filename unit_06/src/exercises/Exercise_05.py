@@ -1,19 +1,20 @@
 # Address Book Exercise
 def look_up(add_book, name):
     """returns the corresponding address (value) for name (key)"""
-    pass
+    return add_book[name]
 
 def add(add_book, name, address):
     """adds a name/address (key/value) to the address book"""
-    pass
+    edit(add_book, name, address)
 
 def edit(add_book, name, new_address):
     """edits the address entry for name (key) with a new address (value)"""
-    pass
+    add_book[name] = new_address
 
 def delete(add_book, name):
+    
     """deletes name (key) and the address (value) from the addressbook"""
-    pass
+    del add_book[name]
 
 def list_all(add_book):
     """prints out all the addresses
@@ -35,12 +36,18 @@ def list_all(add_book):
 
     Make sure you include a new line after the address.
     """
-    pass
+    items = add_book.items()
+    
+    for name, address in items:
+        
+        print(f"Name: {name}")
+        print(f"Address: {address}\n")
+
 
 def main():
     # define empty address book
     address_book = {}
-
+    
     choice = None
     while choice != "0":
         print(
