@@ -1,5 +1,9 @@
 def initials(*args):
-    return '.'.join(args[0][0], args[1][0], args[][0])
+    returnString = ''
+    for inital in args:
+        returnString += inital[0] + '.'
+
+    return returnString[:-1]
 
     
 

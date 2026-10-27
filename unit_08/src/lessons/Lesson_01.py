@@ -1,39 +1,26 @@
 def is_palindrome(s):
-    """ Tests if a string is a palindrome, ignore upper/lower case
+    s = s.lower()
+  
+    reversedString = ''.join(reversed(s))
+    if s == reversedString:
+        return True
 
-  e.g. ABBA returns True
-  AbBa returns True
-  snake returns False
+    return False
 
-  Parameters
-  ----------
-  s: str
-    String to test as palindrome
 
-  Returns
-  -------
-  bool:
-    Return True if s in a palindrome; False otherwise.
-  """
-    pass
 
 
 def filter_palindromes(items):
-    """ Filters a list for palindromes.
+    newList = []
+    for item in items:
+      
+      reversedString = ''.join(reversed(item))
+      if item.lower() == reversedString.lower():
+          # You could append both foward and reversed here since they are the same 
+          newList.append(item)
 
-  e.g. ["ABBA", "snake", "Peep", "this"] returns ["ABBA", "Peep"]
+    return newList
 
-  Parameters
-  ----------
-  items: list
-    List of strings.
-
-  Returns
-  -------
-  list:
-    Filtered list of palindromes
-  """
-    pass
 
 
 if __name__ == "__main__":
