@@ -1,17 +1,10 @@
-# def arithmetic_sum(a,b,n):
-#     # increment = 1
-#     # finalValue = a
+def arithmetic_sum(a,b,n):
+    total = a
     
-#     # while increment<n:
-#     #     increment +=1
-#     #     finalValue += b*increment
-        
-    
-#     # return finalValue
-#     finalValue = a 
-#     for i in range(n):
-#         finalValue+=b*i
+    for i in range(1, n, 1):
+        total += (b*i)+a
 
+    return total
     
 
 

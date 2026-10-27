@@ -3,14 +3,19 @@ import random
 
 def get_user_guess():
     """ gets the user input"""
-    # remove the following line and write the function here
-    pass
+    userNumber = int(input("Please enter a whole number between 1 and 10 or q to quit\n"))
+    
+    if not(userNumber > 0 and userNumber < 11):
+        print("Invalid input\n")
+        get_user_guess()
+
+    return userNumber
+        
 
 
 def print_feedback(no_guesses, max_guesses, secret_num):
     """ prints the end feedback """
-    # remove the following line and write the function here
-    pass
+    print(f"Well done, you used {no_guesses}/{max_guesses} guesses to guess the secret number {secret_num}.")
 
 
 def main():
