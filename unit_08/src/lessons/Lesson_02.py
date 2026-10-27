@@ -1,5 +1,7 @@
 def initials(*args):
-    pass
+    return '.'.join(args[0][0], args[1][0], args[][0])
+
+    
 
 
 if __name__ == "__main__":
