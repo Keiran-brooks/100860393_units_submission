@@ -1,13 +1,23 @@
+import os, base64
+
+
+# base64_string =" R2Vla3NGb3JHZWVrcyBpcyB0aGUgYmVzdA =="
+# base64_bytes = base64_string.encode("ascii")
+
+# sample_string_bytes = base64.b64decode(base64_bytes)
+# sample_string = sample_string_bytes.decode("ascii")
+
+
 def get_current_working_directory():
-  pass
+  return os.getcwd()
 
 def encode_string(str_to_encode):
-  """ Encodes a string using base64"""
-  pass
+  return base64.b64encode(str_to_encode.encode("ascii")).decode("ascii")
 
 def decode_string(base64_str_to_decode):
   """ Decodes a string encoded in base64"""
-  pass
+  return base64.b64decode(base64_str_to_decode.encode("ascii")).decode("ascii")
+
   
 
 if __name__ == "__main__":
