@@ -7,7 +7,10 @@ def string_list_concat(string_list):
   returns
   "Thisisalistofstrings"
   """
-  pass
+  if len(string_list) == 1:
+    return string_list[0]
+
+  return string_list[0] + string_list_concat(string_list[1:])
 
 @trace
 def string_list_concat_with_space(string_list):
@@ -16,7 +19,10 @@ def string_list_concat_with_space(string_list):
   returns
   "This is a list of strings"
   """
-  pass
+  if len(string_list) == 1:
+      return string_list[0]
+  
+  return string_list[0] + ' '  + string_list_concat_with_space(string_list[1:])
 
 if __name__ == "__main__":
   str_list = ["This", "is", "a", "list", "of", "strings"]

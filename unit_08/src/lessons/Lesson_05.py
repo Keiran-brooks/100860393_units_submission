@@ -10,8 +10,29 @@ def no_paths(x,y):
   else:
     return no_paths(x-1, y) + no_paths(x, y-1)
 
+## {"x,y": 1,2}
 def no_paths_memo(x, y, memo):
-  pass
+  
+  if not (x, y) in memo.keys():
+    if x == 0 and y == 0:
+      memo[(x,y)] = 1
+      return 1
+    elif x == 0:
+      memo[(x,y)] = no_paths_memo(0, y-1, memo)
+      return memo[(x,y)]
+    elif y == 0:
+      memo[(x,y)] = no_paths_memo(x-1, 0, memo)
+      return memo[(x,y)]
+
+    else:
+      memo[(x,y)] = no_paths_memo(x-1, y, memo) + no_paths_memo(x, y-1, memo)
+      return memo[(x,y)]
+    
+
+      
+  else:
+    return memo[(x,y)]
+    
 
 
 if __name__ == "__main__":
@@ -26,5 +47,6 @@ if __name__ == "__main__":
   start_time = timeit.default_timer()
   # walk a grid 13 by 13. This should take a fraction of a second
   print(f"Number of paths for a 13x13 grid is {no_paths_memo(12,12, {})}")  
+  
   end_time = timeit.default_timer()
   print(f"Time taken: {end_time - start_time}")

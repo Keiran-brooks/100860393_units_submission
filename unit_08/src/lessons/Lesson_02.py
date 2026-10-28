@@ -2,7 +2,8 @@ def initials(*args):
     returnString = ''
     for inital in args:
         returnString += inital[0] + '.'
-
+    
+    #-1 to strip the final . on the inital as it isnt needed
     return returnString[:-1]
 
     
