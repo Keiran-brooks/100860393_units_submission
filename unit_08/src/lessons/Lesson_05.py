@@ -10,7 +10,7 @@ def no_paths(x,y):
   else:
     return no_paths(x-1, y) + no_paths(x, y-1)
 
-## {"x,y": 1,2}
+## {(x,y): 1}
 def no_paths_memo(x, y, memo):
   
   if not (x, y) in memo.keys():
