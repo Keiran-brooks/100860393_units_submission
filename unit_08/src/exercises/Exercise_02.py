@@ -1,9 +1,9 @@
 def and_many(*args):
-  pass
+  return sum(args)==len(args)
 
 
 def or_many(*args):
-  pass
+  return sum(args)>0
 
 
 if __name__ == "__main__":
