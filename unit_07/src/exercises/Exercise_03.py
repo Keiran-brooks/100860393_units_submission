@@ -38,8 +38,8 @@ def main():
     print(f"No. of Tails: {countOfTosses[0]}")
 
     percentages = percentage(countOfTosses)
-    print(f"\n%   of Heads: {percentages[1]}")
-    print(f"%   of Tails: {percentages[0]}")
+    print(f"\n%   of Heads: {percentages[1]:.2f}")
+    print(f"%   of Tails: {percentages[0]:.2f}")
 
 
 if __name__ == "__main__":

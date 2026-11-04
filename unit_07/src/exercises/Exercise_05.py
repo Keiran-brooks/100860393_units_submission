@@ -1,11 +1,63 @@
 def load_grid(filename):
-  pass
+
+  with open(filename, "r") as f:
+    grid = []
+    for line in f:
+      newLine = []
+      for i in range(len(line.strip())):
+        newLine.append(int(line[i]))
+      grid.append(newLine)
+      
+  return grid
 
 def max_num_in_rows(grid, num_digits):
-    pass
+    biggestNumber = 0
+    gridWidth = len(grid)
+    for i in range(gridWidth):
+      for j in range(gridWidth - num_digits + 1):
+        currentNumber = 0
+        for k in range(num_digits):
+          currentNumber = currentNumber * 10 + grid[i][j + k]
+        if currentNumber > biggestNumber:
+          biggestNumber = currentNumber
+
+    return biggestNumber
 
 def max_num_adv(grid, num_digits):
-  pass
+  biggestNumber = 0
+  gridWidth = len(grid)
+
+  for row in range(gridWidth):
+    for col in range(gridWidth):
+      if col + num_digits <= gridWidth:
+        currentNumber = 0
+        for k in range(num_digits):
+          currentNumber = currentNumber * 10 + grid[row][col + k]
+        if currentNumber > biggestNumber:
+          biggestNumber = currentNumber
+
+      if row + num_digits <= gridWidth:
+        currentNumber = 0
+        for k in range(num_digits):
+          currentNumber = currentNumber * 10 + grid[row + k][col]
+        if currentNumber > biggestNumber:
+          biggestNumber = currentNumber
+
+      if row + num_digits <= gridWidth and col + num_digits <= gridWidth:
+        currentNumber = 0
+        for k in range(num_digits):
+          currentNumber = currentNumber * 10 + grid[row + k][col + k]
+        if currentNumber > biggestNumber:
+          biggestNumber = currentNumber
+
+      if row - num_digits + 1 >= 0 and col + num_digits <= gridWidth:
+        currentNumber = 0
+        for k in range(num_digits):
+          currentNumber = currentNumber * 10 + grid[row - k][col + k]
+        if currentNumber > biggestNumber:
+          biggestNumber = currentNumber
+
+  return biggestNumber
 
 def print_grid(grid):
   for line in grid:
