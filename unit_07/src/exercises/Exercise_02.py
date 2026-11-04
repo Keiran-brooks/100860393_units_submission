@@ -3,17 +3,22 @@ import json
 
 def add_item(menu_dict, name, price):
   """ Adds a new item to the menu"""
-  pass
+  
+  menu_dict["menu"].update({menu_dict["next_id"]: {"Name": name, "Price": price}})
+ 
+  
 
 
 def load(filename):
   """ loads the file into a dictionary and returns dictionary"""
-  pass
+  with open(filename) as file:
+    return json.load(file)
 
 
 def save(filename, menu_dict):
   """ save out the menu to the filename"""
-  pass
+  with open(filename, "w") as file:
+    file.writelines(json.dumps(menu_dict))
 
 
 def list_options():

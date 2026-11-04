@@ -2,8 +2,9 @@
 
 def number_of_lines(filename):
   with open(filename) as test:
-    print(test.lines())
+    lines = test.readlines()
     
+    return len(lines)
 
 def main():
   #Doesnt work on VSC due to running the python file inside of lessons folder and not unit root

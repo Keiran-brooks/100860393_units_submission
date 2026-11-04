@@ -1,6 +1,23 @@
 from tracer import trace
 
 # do not remove @trace, this will trace the recursive calls
+
+# f (decimalNumber == 0) {
+#             return "0";
+#         }
+#         // String to store the hexadecimal digits
+#         String digits = "0123456789ABCDEF";
+#         // Recursive call with the quotient
+#         String result = convertBase(decimalNumber / targetBase, targetBase);
+#         // Get the remainder
+#         int remainder = decimalNumber % targetBase;
+#         // Append the remainder to the result
+#         if (decimalNumber / targetBase == 0) {
+#             return digits.charAt(remainder) + "";
+#         } else {
+#             return result + digits.charAt(remainder);
+#         }
+#     }
 @trace
 def base_10_convertor_rec(num_string, convert_from_base):
   pass

@@ -1,17 +1,1 @@
-{
-    "next_id": 5,
-    "menu": {
-        "1": {
-            "Name": "Burger and Fries",
-            "Price": 5.99
-        },
-        "2": {
-            "Name": "Chicken and Rice",
-            "Price": 6.99
-        },
-        "3": {
-            "Name": "Saag Aloo",
-            "Price": 8.99
-        }
-    }
-}
+{"next_id": 4, "menu": {"1": {"Name": "Burger and Fries", "Price": 5.99}, "2": {"Name": "Chicken and Rice", "Price": 6.99}, "3": {"Name": "Saag Aloo", "Price": 8.99}}}
