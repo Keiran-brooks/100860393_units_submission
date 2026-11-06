@@ -3,18 +3,31 @@ import random
 
 def get_user_guess():
     """ gets the user input"""
-    userNumber = int(input("Please enter a whole number between 1 and 10 or q to quit\n"))
+    userNumber = input("Please enter a whole number between 1 and 10 or q to quit\n")
+
+    if userNumber=='q':
+        return userNumber
     
-    if not(userNumber > 0 and userNumber < 11):
+    
+    if not userNumber.isdigit():
         print("Invalid input\n")
         get_user_guess()
+    else:
+        userNumber = int(userNumber)
+        if not(userNumber > 0 and userNumber < 11):
+            print("Invalid input\n")
+            get_user_guess()
 
-    return userNumber
+        return str(userNumber)
         
 
 
 def print_feedback(no_guesses, max_guesses, secret_num):
     """ prints the end feedback """
+    if(no_guesses>max_guesses):
+        print("Sorry, better luck next time.")
+        return
+
     print(f"Well done, you used {no_guesses}/{max_guesses} guesses to guess the secret number {secret_num}.")
 
 
@@ -47,10 +60,10 @@ def main():
 
 if __name__ == "__main__":
     # call the main() function to run the whole program
-    main()
+    #main()
 
     # Uncomment any of these lines to test the functions on their own. You will probably want to comment out the call to main() as well.
 
-    # get_user_guess()
-    # print_feedback(2, 3, 5) # should print Well done, you used 2/3 guesses to guess the secret number 5.
-    # print_feedback(4, 3, 6) # should print Sorry, better luck next time.
+    get_user_guess()
+    #print_feedback(2, 3, 5) # should print Well done, you used 2/3 guesses to guess the secret number 5.
+    #print_feedback(4, 3, 6) # should print Sorry, better luck next time.

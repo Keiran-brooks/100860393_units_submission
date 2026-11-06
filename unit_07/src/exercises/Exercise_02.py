@@ -4,7 +4,8 @@ import json
 def add_item(menu_dict, name, price):
   """ Adds a new item to the menu"""
   
-  menu_dict["menu"].update({menu_dict["next_id"]: {"Name": name, "Price": price}})
+  menu_dict["menu"].update({str(menu_dict["next_id"]): {"Name": name, "Price": float(price)}})
+  
   menu_dict["next_id"] = len(menu_dict["menu"])+1
   
 

@@ -30,7 +30,7 @@ def max_num_adv(grid, num_digits):
         # if int(''.join(grid[row][col:col+num_digits])) > biggestNumber:
           # biggestNumber = int(''.join(grid[row][col:col+num_digits]))
   # return biggestNumber
-  pass #TODO:
+  pass #TODO: finish this function
 
 def print_grid(grid):
   for line in grid:
